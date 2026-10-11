@@ -18,9 +18,11 @@ function Userlist() {
   return (
     <>
       {users.map((user) => (
+      <li key={user.id}>
         <Link to={`/UserDetails/${user.id}`} key={user.id}>
           <h1>{user.firstName} {user.lastName}</h1>
         </Link>
+        </li>
       ))}
     </>
   );
